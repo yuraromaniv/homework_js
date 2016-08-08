@@ -1,0 +1,108 @@
+1.
+function strToArray(){
+	var arr = [];
+  for(var i= 0; i<arguments.length; i++){
+  	if(parseInt(arguments[i])){
+    	arr.push(arguments[i]);
+    }
+  }
+  console.log(arr);
+ 
+}
+
+strToArray('2', '3', '4','das');
+
+
+
+
+
+2.
+var arr = [];
+function strToArray(){
+	
+  for(var i= 0; i<arguments.length; i++){
+  	if(parseInt(arguments[i])){
+    	arr.push(arguments[i]);
+    }
+  }
+  
+ 
+}
+
+strToArray('2', '3', '4','das');
+
+for(var i = 0; i < arr.length; i++) {
+
+arr[i] = parseInt(arr[i]);
+
+}
+var result = arr.reduce(function(sum, current) {
+  return sum + current;
+}, 0);
+console.log(arr, 'array sum=',result);
+
+3.
+var typeOfUniqueSymbol = ' ';
+var arrayOfSymbols = [2, 3, '3', 2, 'das'];
+for(var i=0; i<arrayOfSymbols.length; i++){
+if(typeof(typeOfUniqueSymbol)==typeof(arrayOfSymbols[i])){
+console.log('uniqueElement=',arrayOfSymbols[i]);
+}
+}
+
+
+
+
+
+4.
+Object.size = function(obj) {
+	var size = 0;
+	for(key in obj) {
+		if(obj.hasOwnProperty(key)) size++;
+	}
+	return size;
+}
+var str = 'muahaha';
+var letters = new Object;
+for(x = 0, length = str.length; x < length; x++) {
+	var l = str.charAt(x)
+	letters[l] = (isNaN(letters[l]) ? 1 : letters[l] + 1);
+}
+console.log(Object.size(letters));
+
+
+5.
+var men = [{name:"vasia", age:65} ,
+           {name:"ira", age:5}, 
+           {name:"kostia", age:70}];
+    
+function getRetired(arr){
+	var retired = [];
+  for (var i=0; i<arr.length; i++){
+  	if(arr[i].age > 64){
+    	retired.push(arr[i]);
+    }
+  }
+  return retired;
+}
+
+var retired = [];
+retired = getRetired(men);
+for(var i=0; i< retired.length; i++){
+console.log(retired[i].name);
+}
+6.
+
+трошки не працює =))
+
+var array = [1, 2, 4, 4, 5]|[3, 2, 4, 2, 1, 5]*/вибрати масив;
+array.splice(-1,1);
+if(array[1]>array[2]){
+var min = Math.min.apply(null, array);
+var max = Math.max.apply(null, array);
+console.log(min-max);
+}
+else{
+console.log('p=0');
+}
+
